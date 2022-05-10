@@ -118,7 +118,8 @@
             </div>
         </div>
     </div>
-    <!-- <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/index.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

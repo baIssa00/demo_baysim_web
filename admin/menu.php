@@ -8,7 +8,7 @@
     <div class="container">
         <div class="navbar-header">
 			<a href="dashboard.php" class="navbar-brand">Dashboard</a>
-		</div> -->
+		</div>
         
         <!-- Links -->
         <ul class="nav navbar-nav">	
@@ -18,13 +18,13 @@
                 </a>
             </li>
         </ul>
-        <!-- <ul class="nav navbar-nav">	
+        <ul class="nav navbar-nav">	
             <li class="nav-item">
-                <a href="articles.php" class="nav-link">
-                    Articles
+                <a href="search.php" class="nav-link">
+                    Rechercher
                 </a>
             </li>
-        </ul> -->
+        </ul>
         <ul class="nav navbar-nav navbar-right">	
             <!-- <li>
 				<a href="editUser.php?idUser=<?php echo $_SESSION['user']['iduser'] ?>"> 

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', Verdana;
+    transition: all .3s linear;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    background: #333;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  linear-gradient(45deg, #333 80%, #F69322 20%);
+}
+
+.logo-image > img{
+    position: absolute;
+    bottom: 5px; left: 5px;
+    z-index: 2;
+    width: 400px;
+    height:auto;
+}
+form{
+    /* height: 500px; */
+    width: 400px;
+    padding: 10px;
+    margin-left: 200px;
+    box-shadow:0 0 10px #000;
+    border-radius: 10px;
+    text-align: center;
+    color: #F69322;
+}
+form h3{
+    font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+    font-size: 30px;
+}
+form .error-msg{
+    margin:10px 0;
+    display: flex;
+    background: #F69322;
+    color:#fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding:10px;
+ }
+form .box{
+    height: 30px;
+    width: 90%;
+    margin-top: 15px;
+    padding: 0 20Px;
+    background: none;
+    outline:none;
+    border: none;
+    caret-color: #F69322;
+    border-bottom: 2px solid #F69322;
+    color: wheat;
+}
+
+form i{
+    margin-top: 25px;
+    padding: 2px 0 0 10px;
+}
+
+form .form-a a{
+    line-height: 70px;
+    float: right;
+    color: wheat;
+    padding: 0 30px;
+}
+
+form .btn{
+    color: wheat;
+    margin: 25px;  
+    height: 45px;
+    width: 90%;
+    background: #F69322;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form p{
+    margin-top: 5px;
+    font-size: 14px;
+    color:wheat;
+ }
+ 
+form p a{
+    color:#F69322;
+}
+form p a:hover{
+    color:#F0582B; 
+  }
+form .btn:hover{
+  opacity: 6;  
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+.controls{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.controls > label{
+    display: block;
+    height: 40px;
+    width: 100px;
+    box-shadow: 0 0 5px #000 inset;
+    border-radius: 50px;
+    position: relative;
+}
+.controls > label::before{
+    content: '';
+    position: absolute;
+    top: 4px; left: 4px;
+    height: 32px; width: 32px;
+    background: #f7f7f7;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#switch:checked ~ .controls > label::before{
+    left: 63px;
+    background: #333;
+}
+#switch:checked ~ .controls > label{
+    background: #f7f7f7;
+}
+
+#switch:checked ~ .container{
+    background:  linear-gradient(45deg, #f7f7f7 80%, #F69322 20%);
+}
+
+#switch:checked ~ .container > form > .box{
+    color: #000;
+}
+
+#switch:checked ~ form p a{
+    color: #000;
+}
+
+
+@media (max-width:1300px) {
+    .logo-image > img{
+        width: 350px; 
+    }
+    form{
+        margin-left: 0;
+    }
+}
+@media (max-width:1120px) {
+    .logo-image > img{
+        display: none; 
+    }
+    
+}

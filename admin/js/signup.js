@@ -1,26 +1,16 @@
-$(document).ready(function () {
-    $("form").submit(function (event) {
-        var formData = {
-            login: $("#login").val(),
-            email: $("#email").val(),
-            pwd1: $("#pwd1").val(),
-            pwd2: $("#pwd2").val(),
-          };
-        $.ajax({
-        type: "POST",
-        url: "signup.php",
-        data: formData,
-        dataType: "json",
-        encode: true,
-        }).done(function (data) {
-        console.log(data);
-        // if (data.success) {
-        //     $("form").html(
-        //       '<div class="error-msg">' + success_msg + "</div>"
-        //     );
-        // }
-        });
-    
+$(document).ready(function () { 
+    $('#btn-inscrits').click(function(event){
         event.preventDefault();
+        //alert("button");
+        $.ajax({
+            url: 'validation.php',
+            type: 'POST',
+            data: $("form").serialize(),
+            success: function (data) {
+                if (!data.success) {
+                    $("#error").html(data);
+                }
+            }
+        });
     });
-})
+});

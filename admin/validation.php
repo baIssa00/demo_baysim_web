@@ -12,6 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if (isset($login)) {
+        if (!preg_match("/^[a-zA-Z0-9-' ]*$/",$login)) {
+            echo "Seules les lettres et les espaces blancs sont autorisés pour le nom d'utilisateur";
+            $data['success'] = false;
+            exit();
+        }
+        
         $filtredLogin = filter_var($login, FILTER_SANITIZE_STRING);
 
         if (strlen($filtredLogin) < 4) {
@@ -37,7 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (isset($email)) {
-        $filtredEmail = filter_var($login, FILTER_SANITIZE_EMAIL);
+        // Remove all illegal characters from email
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+        
+        // Validate e-mail
+        $filtredEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
 
         if ($filtredEmail != true) {
             echo "Erreur!!! Email  non valid<br>";

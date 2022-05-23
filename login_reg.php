@@ -19,10 +19,10 @@ if ($user = $resultat->fetch()) {
         header('location:home.php');
     } else {
 
-        $_SESSION['erreurLogin'] = "<p><strong>Erreur!!</strong> Votre compte est désactivé. Veuillez contacter l'administrateur</p>";
+        $_SESSION['erreurLogin'] = "<p class='error-msg'><strong>Erreur!!</strong> Votre compte est désactivé. Veuillez contacter l'administrateur</p>";
         header('location:public/login.php');
     }
 } else {
-    $_SESSION['erreurLogin'] = "<p><strong>Erreur!</strong><br> Login ou mot de passe incorrecte !</p>";
+    $_SESSION['erreurLogin'] = "<p class='error-msg'><strong>Erreur!</strong>Login ou mot de passe incorrecte !</p>";
     header('location:public/login.php');
 }

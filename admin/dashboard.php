@@ -86,12 +86,12 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a onclick="return confirm('Etes vous sur de vouloir supprimer cet utilisateur')" href="deleteUser.php?idUser=<?php echo $user['iduser'] ?>">
+                                    <a href="" class="btn-deleteUser" id="deleteUser"  value="<?php echo $user['iduser'] ?>">
                                         <span class="glyphicon glyphicon-trash">Supprimer</span>
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="activeUser.php?idUser=<?php echo $user['iduser'] ?>&etat=<?php echo $user['etat']  ?>">
+                                    <a href="" class="btn-activeUser" id="getId" idUseur="<?php echo $user['iduser'] ?>" etat="<?php echo $user['etat'] ?>">
                                         <?php
                                         if ($user['etat'] == 1)
                                             echo '<p><span class="glyphicon glyphicon-ok">Activé</span></p>';

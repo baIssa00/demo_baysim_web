@@ -15,13 +15,13 @@ session_destroy();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Se connecter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <div class="form-container">
-        <form method="post" action="seConnecter.php" class="form">
+        <form method="post" action="login_reg.php" class="form">
             <h3>Connexion</h3>
             <?php if (!empty($erreurLogin)) { ?>
                 <div class="error-msg">
@@ -29,6 +29,7 @@ session_destroy();
                 </div>
             <?php } ?>
 
+            <div class="logoBS"><img src="img/logo.png"/></div>
             <input type="text" name="login" required placeholder="Entrez votre nom d'utilisateur">
             <input type="password" name="password" required placeholder="Entrez votre mot de passe">
             <input type="submit" name="submit" value="Se coonecter" class="form-btn">

@@ -29,6 +29,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

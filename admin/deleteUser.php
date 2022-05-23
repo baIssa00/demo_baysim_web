@@ -1,10 +1,4 @@
 <?php
-    if ($_GET['idUser'] == 1) {
-        die('ok');
-    } else {
-        header('500 Interval Server Error ', true, 500);
-        die('not ok');
-    }
     session_start();
     if(isset($_SESSION['user'])){
         

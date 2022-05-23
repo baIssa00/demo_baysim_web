@@ -49,7 +49,7 @@ session_destroy();
             <?php if (!empty($erreurLogin)) { ?>
                 <div class="error-msg">
                     <?php echo $erreurLogin ?>
-                </div>
+                </div>  
             <?php } ?>
             <i class="fas fa-user"><input type="text" name="login" required placeholder="Nom d'utilisateur" class="box"></i>
             <i class="fas fa-lock"><input type="password" name="password" required placeholder="Mot de passe" class="box"></i>

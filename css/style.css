@@ -68,7 +68,7 @@
    justify-content: center;
    padding:20px;
    padding-bottom: 60px;
-   background: #eee;
+   background-image: url('../admin/img/bgrd2.png');
 }
 
 .form-container form{
@@ -78,6 +78,13 @@
    background: #fff;
    text-align: center;
    width: 500px;
+}
+
+.form-container form .logoBS img
+{
+    width: 200px;
+    height: 200px;
+    margin: -5px 10px;
 }
 
 .form-container form h3{

@@ -33,11 +33,13 @@
 					<?php echo  ' '.$_SESSION['user']['login']?>
 				</a> 
 			</li> -->
+            
             <li class="nav-item">
                 <a href="logout.php" class="nav-link">
                     <span class="glyphicon glyphicon-log-in"></span> Se déconnecter  	
                 </a>
             </li>			
         </ul>
+        
     </div>
 </nav>

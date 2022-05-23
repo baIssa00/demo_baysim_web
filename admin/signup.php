@@ -9,7 +9,7 @@ require_once("../dbConfig.php");
     <meta charset="utf-8" />
 
     <title> Nouvel utilisateur </title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 
 </head>

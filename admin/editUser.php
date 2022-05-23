@@ -20,7 +20,7 @@ $role = $utilisateur['role'];
 <head>
     <meta charset="utf-8">
     <title>Edition d'un utilisateur</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"> 
 </head>
@@ -28,7 +28,7 @@ $role = $utilisateur['role'];
 <body>
     <div class="container">
     <?php include('menu.php');?>
-        <div class="form-container">
+        <div class="edit-container">
             <form method="POST" action="updateUser.php" class="form" id="edit">
                 <h3>Edition de l'utilisateur</h3>
                 <?php if (!empty($erreurLogin)) { ?>

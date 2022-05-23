@@ -62,7 +62,7 @@
         <div class="panel">
             <div class="panel-heading">Liste des utilisateurs (<?php echo $nbrUser ?> utilisateurs)</div>
             <div class="panel-body">
-                <table class="table table-striped table-bordered">
+                <table class="table table-striped table-bordered table-dark">
                     <thead>
                         <tr>
                             <th>login</th>

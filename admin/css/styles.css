@@ -8,10 +8,13 @@
    text-decoration: none;
 }
 
-/* .panel{
+.panel{
     background-image: url('../img/bgrd2.png');    
-} */
-
+}
+.panel-heading{
+    font-size: 20px;
+    color: #eee;
+}
 table,td{
            border: 1px solid black;
        }

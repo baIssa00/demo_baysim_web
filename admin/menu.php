@@ -18,13 +18,6 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav navbar-nav">	
-            <li class="nav-item">
-                <a href="search.php" class="nav-link">
-                    Rechercher
-                </a>
-            </li>
-        </ul>
         <ul class="nav navbar-nav navbar-right">	
             <!-- <li>
 				<a href="editUser.php?idUser=<?php echo $_SESSION['user']['iduser'] ?>"> 
@@ -40,6 +33,8 @@
                 </a>
             </li>			
         </ul>
-        
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" id="search_user" aria-label="Search" placeholder="Rechercher ...">
+        </form>
     </div>
 </nav>

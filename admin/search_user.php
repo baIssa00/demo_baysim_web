@@ -21,7 +21,7 @@
             <div class="panel-body">
                 <table class="table table-striped table-bordered">
                     
-                    <thead>
+                    <thead class="thead-dark">
                         <tr>
                             <th>login</th>
                             <th>Email</th>
@@ -30,7 +30,7 @@
                         </tr>
                     </thead>
                     <?php while ($user = $resultatUser->fetch()) { ?>
-                    <tbody>
+                    <tbody class="tbody-success">
                         
                             <td><?php echo $user['login'] ?> </td>
                             <td><?php echo $user['email'] ?> </td>

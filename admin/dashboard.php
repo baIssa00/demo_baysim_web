@@ -61,16 +61,15 @@
         <?php include('menu.php');?>
         <div class="panel">
             <div class="panel-heading">Liste des utilisateurs (<?php echo $nbrUser ?> utilisateurs)</div>
-            <div class="panel-body">
+            <div class="panel-body" id="myTable">
                 <table class="table table-striped table-bordered table-dark">
                     <thead>
                         <tr>
                             <th>login</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Modifié</th>
-                            <th>Supprimé</th>
-                            <th>Activé</th>
+                            <th colspan="3">Acions</th>
+                            
                         </tr>
                     </thead>
 
@@ -82,7 +81,7 @@
                                 <td><?php echo $user['role'] ?> </td>
                                 <td>
                                     <a id="edit" href="editUser.php?idUser=<?php echo $user['iduser'] ?>">
-                                        <span class="glyphicon glyphicon-edit">éditer</span>
+                                        <span class="glyphicon glyphicon-edit">Moditer</span>
                                     </a>
                                 </td>
                                 <td>
@@ -117,9 +116,13 @@
                 </div>
             </div>
         </div>
+
+        <div id="searchresult">
+
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

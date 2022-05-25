@@ -33,8 +33,8 @@
                 </a>
             </li>			
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" id="search_user" aria-label="Search" placeholder="Rechercher ...">
-        </form>
+        </form> -->
     </div>
 </nav>

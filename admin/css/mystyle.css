@@ -7,16 +7,15 @@
    outline: none; border:none;
    text-decoration: none;
 }
-
-.panel{
-    background-image: url('../img/bgrd2.png');    
+body{
+   background-image: url('../img/bgrd2.png');    
 }
 .panel-heading{
     font-size: 20px;
     color: #eee;
 }
 table,td{
-           border: 1px solid black;
+           border: 1px solid #333;
        }
        table{
            font-size: 15px;
@@ -36,7 +35,8 @@ a{
     justify-content: center;
     padding:20px;
     padding-bottom: 60px;
-    background-image: url('../img/bgrd2.png');
+    /* background-color: #eee; */
+    /* background-image: url('../img/bgrd2.png');  */
  }
  
  .edit-container form{

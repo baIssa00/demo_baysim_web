@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
 
     $image = $_FILES['image']['name'];
-    $image_folder = 'profile/'.$image;
+    $image_folder = '../images/'.$image;
     $image_tmp_name = $_FILES['image']['tmp_name'];
     $image_size = $_FILES['image']['size'];
 

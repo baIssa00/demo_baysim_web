@@ -11,10 +11,13 @@ $email=isset($_POST['email'])?$_POST['email']:"";
 
 $role=isset($_POST['role'])?$_POST['role']:"";
 
+$image = $_FILES['image']['name'];
+$image_tmp_name = $_FILES['image']['tmp_name'];
+move_uploaded_file($image_tmp_name, "../images/".$image);
 
-$requete="update users set login=?,email=? , role=? where iduser=?";
+$requete="update users set login=?,email=? , role=? , image=? where iduser=?";
 
-$params=array($login,$email,$role,$iduser);
+$params=array($login,$email,$role,$image,$iduser);
 
 $resultat=$pdo->prepare($requete);
 

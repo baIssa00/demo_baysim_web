@@ -48,26 +48,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"> 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <title>Document</title>
+    <title>Dashboard</title>
 </head>
 <body>
+<?php include('menu.php');?> 
+    <div class="container"> 
+        <!-- Search User -->
+        <!-- <div class="panel panel-success margetop60">
+			<div class="panel-heading">Rechercher des utilisateurs</div>
+				<div class="panel-body">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="search_user" aria-label="Search" placeholder="Rechercher ...">
+                </form>
+            </div>
+            
+            <label for="role">Role:</label>
+            <select name="role" class="form-control" id="role" onchange="this.form.submit()">
+                <option value="ADMIN" <?php if($role==="ADMIN") echo "selected" ?>>ADMIN</option>
+                <option value="VISITEUR"   <?php if($role==="VISITEUR")   echo "selected" ?>>VISITEUR</option>
+            </select>
+		</div> -->
+
+        
     
-    <div class="container">
-        <?php include('menu.php');?>
-        <div class="panel">
-            <div class="panel-heading">Liste des utilisateurs (<?php echo $nbrUser ?> utilisateurs)</div>
+        <!-- List Users -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            <div class="form-group">
+                <h3>Liste des utilisateurs (<?php echo $nbrUser ?> utilisateurs)</h3>
+                <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" id="search_user" aria-label="Search" placeholder="Rechercher ...">
+                    </form>
+                </div>
+            </div>
             <div class="panel-body" id="myTable">
-                <table class="table table-striped table-bordered table-dark">
+                <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>login</th>
                             <th>Email</th>
                             <th>Role</th>
+                            <th>Photo</th>
                             <th colspan="3">Acions</th>
                             
                         </tr>
@@ -79,6 +105,15 @@
                                 <td><?php echo $user['login'] ?> </td>
                                 <td><?php echo $user['email'] ?> </td>
                                 <td><?php echo $user['role'] ?> </td>
+                                <td>
+                                <?php if ($user['image'] != NULL) { ?>
+                                    
+                                    <img src="../images/<?php echo $user['image']?>" width="50px" height="50px" class="img-circle">
+
+                                    <?php } else { ?>
+                                        <img src="img/user.png" width="50px" height="50px" class="img-circle">
+                                    <?php } ?>
+                                </td>
                                 <td>
                                     <a id="edit" href="editUser.php?idUser=<?php echo $user['iduser'] ?>">
                                         <span class="glyphicon glyphicon-edit">Moditer</span>
